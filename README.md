@@ -64,6 +64,10 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 ## Working method
 Working in pairs
 
+## Todo
+- keyboards
+- verdeeldozen
+
 ------------
 New edition
 

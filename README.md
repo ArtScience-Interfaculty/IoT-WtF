@@ -17,13 +17,14 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 * Introduction 
 * Installation and control of RaspberryPI
 * Command line 1
-* Atom, VNC
+* VNC
 
 ###Tuesday 20 Sept
 * Historic background of GNU and Open Source (Video Stallman et al.)
 * History of the UNIX commands?
 * Command line 2
-* Git & GitHub 
+* Atom
+* Git & GitHub
 
 ###Thursday 22 Sept
 * NodeRED - Graphical programming
@@ -33,7 +34,7 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 
 ###Friday 23 Sept
 * SensorTag, sensorkit - IO - sensors and actuators
-* Python, JavaScript 
+* JavaScript (Python)
 * Questions and suggestions: what would like to add to this course?
 
 ## Week 10
@@ -43,9 +44,11 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 
 ###Tuesday 27 Sept
 * tbd
+* Work on individual or pair projects
 
 ###Thursday 29 Sept
 * tbd
+* Work on individual or pair projects
 
 ###Friday 30 Sept
 * Presentation of pair or individual projects

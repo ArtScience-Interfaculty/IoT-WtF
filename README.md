@@ -31,6 +31,7 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 * Internet - how to work with (live) data of the internet
 * Shonan - search engine
 * Tweets - distil mood
+* 13:00 guest talk "Connected Ad Absurdum" by Vera van de Seyp where she talks about her critical IoT graduation work.
 
 ###Friday 23 Sept
 * SensorTag, sensorkit - IO - sensors and actuators

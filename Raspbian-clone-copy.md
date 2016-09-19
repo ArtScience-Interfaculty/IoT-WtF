@@ -21,4 +21,14 @@ Cloning takes quite some time, be patient. Type `Ctrl-T` to see progress.
 
 This is the reverse process from above.
 
-`sudo dd if=~/Desktop/raspberrypi.dmg of=/dev/rdisk2 bs=5m`
+Find the disk and note the disk#: e.g. `disk2`
+
+`diskutil list`
+
+Now you nedd to unmount the disk, note the disk3!!
+
+`diskutil unmountDisk /dev/disk2`
+
+Make sure the diskimage `rpiwtf.img` is on your desktop and type (note it's `rdisk` not `disk`
+
+`sudo dd if=~/Desktop/rpiwtf.img of=/dev/rdisk2 bs=5m`

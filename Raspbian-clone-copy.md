@@ -32,3 +32,5 @@ Now you nedd to unmount the disk, note the disk3!!
 Make sure the diskimage `rpiwtf.img` is on your desktop and type (note it's `rdisk` not `disk`
 
 `sudo dd if=~/Desktop/rpiwtf.img of=/dev/rdisk2 bs=5m`
+
+Note this takes at least 5 minutes. Type Ctrl-T to see progress.

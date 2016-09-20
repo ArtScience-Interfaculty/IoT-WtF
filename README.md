@@ -4,7 +4,7 @@
 The IoT WtF course at the ArtScience Interfaculty in The Hague Netherlands.
 
 ### Location
-BB202
+PB203
 
 ## WtF
 Terminal voodoo, Atom, Git & GitHub, RaspberryPI, GPIO, MQTT, OSC, NodeRED, Javascript, Python, JSON, Sensors, Actuators, SensorTag, Deep web.
@@ -31,12 +31,12 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 * Internet - how to work with (live) data of the internet
 * Shonan - search engine
 * Tweets - distil mood
-* 13:00 guest talk "Connected Ad Absurdum" by Vera van de Seyp where she talks about her critical IoT graduation work.
 
 ###Friday 23 Sept
 * SensorTag, sensorkit - IO - sensors and actuators
 * JavaScript (Python)
 * Questions and suggestions: what would like to add to this course?
+* 13:00 guest talk "Connected Ad Absurdum" by Vera van de Seyp where she talks about her critical IoT graduation work.
 
 ## Week 10
 ###Monday 26 Sept

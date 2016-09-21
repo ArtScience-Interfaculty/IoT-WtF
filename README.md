@@ -29,7 +29,7 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 ###Thursday 22 Sept
 * NodeRED - Graphical programming
 * Internet - how to work with (live) data of the internet
-* Shonan - search engine
+* Shodan - search engine
 * Tweets - distil mood
 
 ###Friday 23 Sept

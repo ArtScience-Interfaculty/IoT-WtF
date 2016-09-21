@@ -25,7 +25,7 @@ Find the disk and note the disk#: e.g. `disk2`
 
 `diskutil list`
 
-Now you nedd to unmount the disk, note the disk3!!
+Now you nedd to unmount the disk, note the disk#!!
 
 `diskutil unmountDisk /dev/disk2`
 

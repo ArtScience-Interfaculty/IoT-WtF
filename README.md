@@ -35,13 +35,13 @@ While we want to get you up to snuff with IoT related issues, A major change in 
 ###Friday 23 Sept
 * SensorTag, sensorkit - IO - sensors and actuators
 * JavaScript (Python)
+* MQTT and OSC communication protocols
 * Questions and suggestions: what would like to add to this course?
 * 13:00 guest talk "Connected Ad Absurdum" by Vera van de Seyp where she talks about her critical IoT graduation work.
 
 ## Week 10
 ###Monday 26 Sept
 * Questions and suggestions
-* OSC 
 
 ###Tuesday 27 Sept
 * tbd

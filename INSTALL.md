@@ -17,9 +17,11 @@ touch ~/.bash_aliases && echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >>
 
 USERNAME="h4nkw1ll1@ms"
 
-EMAIL="h4nk@"`hostname`
+EMAIL="h4nk@"\`hostname\`
 
-echo "git config --global user.name  $USERNAME" >> ~/.bash_aliases && echo "git config --global user.email $EMAIL" >> ~/.bash_aliases
+echo "git config --global user.name  $USERNAME" >> ~/.bash_aliases
+
+echo "git config --global user.email $EMAIL" >> ~/.bash_aliases
 
 
 # finally, load the aliases

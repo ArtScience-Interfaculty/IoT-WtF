@@ -1,7 +1,7 @@
 # installation
 
 
-# open a terminal
+# open a terminal, evaluate all lines individually
 
 mkdir ~/dev && cd ~/dev # create dir and go there
  

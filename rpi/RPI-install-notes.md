@@ -1,12 +1,19 @@
 CONTENTS
 
 • raspi-config
+
 • connect to network
+
 • access rpi from your laptop (ssh remote login)
+
 • node-red (browser-based control over rpi, the internet and things)
+
 • camera commands (for rpi camera)
+
 • serial connection (requires special cable)
+
 • sensortag (small all-in-one bluetooth sensorbox from texas instruments)
+
 • keyboard layout (mapping of characters to keys)
 
 

@@ -12,10 +12,11 @@ source $FUNCPATH
 
 ## VNC
 
-# this is the hdmi/video one, start at boot
+# this is the hdmi/video one, it starts at boot
 alias vnc-stop="pkill x11vnc"
 alias vnc-start="/home/pi/.bootstart_vnc.sh &"
-#alias vnc-start="x11vnc -display :0 -noxdamage -ncache 10 -ncache_cr &"
+# alias vnc-start="x11vnc -display :0 -noxdamage -ncache 10 -ncache_cr &"
+
 ## x11vnc -forever -display :0 -noxdamage -ncache 10 -ncache_cr
 
 # this is another desktop from the one coming out of hdmi/video output

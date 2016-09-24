@@ -12,11 +12,11 @@ touch ~/.bash_aliases
 echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases  # add IoT-WtF aliases
 
 
-# for git, set username and email
+# for git, set username and email (change it to apply for you)
 
-USERNAME="h4nkw1ll1@ms"
+USERNAME="Ted.Kaczynski"
 
-EMAIL="h4nk@"\`hostname\`
+EMAIL="Ted.Kaczynski@"\`hostname\` # change only the name before @
 
 echo "git config --global user.name  $USERNAME" >> ~/.bash_aliases
 

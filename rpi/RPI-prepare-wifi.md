@@ -5,6 +5,12 @@
 ```bash
 sudo nano /etc/hostname
 ```
+## add a line (replace other 127.0.0.1 or 127.0.1.1) to hosts file
+```bash
+sudo nano /etc/hosts
+
+127.0.0.1     YOURHOSTNAME
+```
 
 ## change password
 ```bash

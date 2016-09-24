@@ -3,6 +3,8 @@
 # to load these, just run
 # source gitfunctions.sh
 
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 git config --global user.name  $(whoami)
 # or:
 # git config --global user.name  "h4nkw1ll1@ms"

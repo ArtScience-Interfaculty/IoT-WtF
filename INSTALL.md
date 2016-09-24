@@ -9,7 +9,7 @@ git clone https://github.com/ArtScience-Interfaculty/IoT-WtF.git # download repo
 
 touch ~/.bash_aliases
 
-echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases  # link to bash aliases
+echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases  # make IoT-WtF bash aliases autoload when open terminal
 
 
 # for git, set username and email

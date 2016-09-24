@@ -3,16 +3,19 @@
 
 # open a terminal, evaluate all lines individually
 
-mkdir ~/dev && cd ~/dev # create dir and go there
+•create dir and go there
+mkdir ~/dev && cd ~/dev
  
-git clone https://github.com/ArtScience-Interfaculty/IoT-WtF.git # download repository
+•download repository
+git clone https://github.com/ArtScience-Interfaculty/IoT-WtF.git
 
 touch ~/.bash_aliases
 
-echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases  # add IoT-WtF aliases
+•add IoT-WtF aliases
+echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases
 
 
-# for git, set username and email (change it to apply for you)
+• for git, set username and email (change it to apply for you)
 
 USERNAME="Ted.Kaczynski"
 

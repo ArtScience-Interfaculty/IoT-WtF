@@ -1,11 +1,13 @@
 # Various Open Sound Control examples
 
 ## node
-### localhost:3333, send '/wtf' message with random int
-node ./oscsend.js
 
 ### receive osc msgs coming in at port 3333
-node ./osc_dump.js
+node ./oscdump.js
+
+### send '/wtf' message with random int (to localhost:3333)
+node ./oscsend.js
+
 
 ## nodered flows for osc
 osc_nodered_p5.json 

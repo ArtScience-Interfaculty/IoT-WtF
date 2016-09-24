@@ -1,17 +1,16 @@
-# easily access pi on your home network
-### plus some other stuff (tired of the cat?)
+# easily access pi on your home network, plus some other stuff (tired of the cat?)
 
 
-## change hostname, on the pi:
-### by default it is rapberrypi.local
+## change hostname, on the pi, by default it is rapberrypi.local
 
+```bash
 sudo nano /etc/hostname
-
-### we assume you changed is to 'mynewrpihostname'
+```
 
 ## change password
+```bash
 passwd
-
+```
 
 ## add your home network
 * on the raspberry, do:
@@ -19,16 +18,13 @@ passwd
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
 
 * add (and fill in) this:
-
+```bash
 network={
-
         ssid="YOURWIRELESSNETWORKNAME"
-
         psk="ITSPASSWORD"
-
         key_mgmt=WPA-PSK
-
 }
+```
 
 
 

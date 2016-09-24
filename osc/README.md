@@ -1,4 +1,4 @@
-# Various Open Sound Control examples
+# Open Sound Control examples
 
 ## test with node.js
 

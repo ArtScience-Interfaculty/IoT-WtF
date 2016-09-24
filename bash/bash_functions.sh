@@ -40,4 +40,4 @@ function commit(){
   git commit -m $MSG
 }
 
-echo "- git functions read"
+echo "- functions read (pull/push - for git)"

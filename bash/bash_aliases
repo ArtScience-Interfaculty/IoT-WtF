@@ -1,35 +1,31 @@
-CUR_DIR="$PWD"
-ALIASESPATH="${CUR_DIR}/${BASH_ARGV[0]}"
-GITFUNCPATH="${CUR_DIR}/git_functions.sh"
+alias iot="cd $HOME/dev/IoT-WtF"
 
-alias rc="nano $ALIASESPATH && . $ALIASESPATH" # edit this file, and then evaluate its content
+IOTWTF="$HOME/dev/IoT-WtF"
+alias iot="cd $IOTWTF"
 
-source $GITFUNCPATH
+ALIASESPATH="$IOTWTF/bash/bash_aliases"
+FUNCPATH="$IOTWTF/bash/bash_functions.sh"
+alias ?="source $ALIASESPATH" # evaluate aliases
+alias ??="nano $ALIASESPATH && source $ALIASESPATH" # edit this file, and then evaluate its content
 
-# ~/.wtf && wtf" # edit that printout
+source $FUNCPATH
 
-# alias wtf=". ~/.wtf" 		# prints some commands
-# alias help="wtf" 		# just the same
-# alias ?="wtf"			# idem
-# alias ??="nano ~/.wtf && wtf" # edit that printout
-
-# alias getip="/sbin/ifconfig eth0 | grep 'inet addr'"
-# > /home/pi/share/currentip.txt"
+## VNC
 
 # this is the hdmi/video one, start at boot
 alias vnc-stop="pkill x11vnc"
 alias vnc-start="/home/pi/.bootstart_vnc.sh &"
-
 #alias vnc-start="x11vnc -display :0 -noxdamage -ncache 10 -ncache_cr &"
 ## x11vnc -forever -display :0 -noxdamage -ncache 10 -ncache_cr
 
-# these is another desktop then the one coming out of hdmi/video output
+# this is another desktop from the one coming out of hdmi/video output
 alias vnc+-start="vncserver :1 -geometry 1024x768 -depth 24"
 alias vnc+-stop="pkill Xtightvnc"
 
 alias mosquitto_start="sudo /etc/init.d/mosquitto start"
 
 ## this is what you see (when type '?')
+
 # echo "getip - get ip address"
 echo "vnc-stop  - stop vnc server (it is running from boot)"
 echo "vnc-start - start vnc server (same display as hdmi/vi ports)"
@@ -39,7 +35,7 @@ echo "mosquitto_start"  # start mosquitto
 
 echo "nodered: http://"`hostname`".local:1881"
 
+echo "- bash aliases read"
 tiffi | lolcat -a
 echo "?/??/rc"
 echo ":))"
-

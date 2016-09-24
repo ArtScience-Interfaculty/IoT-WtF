@@ -3,12 +3,15 @@
 ## test with node.js
 
 #### receive osc msgs coming in at port 3333
+```bash
 node ./oscdump.js
-
+```
 #### send '/wtf' message with random int (to localhost:3333)
+```bash
 node ./oscsend.js
-
+```
 ## nodered flows for osc
+
 osc_nodered_p5.json
 
 osc_nodered_sc.json 

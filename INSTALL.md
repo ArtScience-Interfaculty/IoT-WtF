@@ -1,16 +1,13 @@
 # installation
 
 
-# open a terminal, type
+# open a terminal
 
-mkdir ~/dev
+mkdir ~/dev && cd ~/dev # create dir and go there
+ 
+git clone https://github.com/ArtScience-Interfaculty/IoT-WtF.git # download repository
 
-git clone https://github.com/ArtScience-Interfaculty/IoT-WtF.git
-
-
-# link to bash aliases
-
-touch ~/.bash_aliases && echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases
+touch ~/.bash_aliases && echo "source /home/pi/dev/IoT-WtF/bash/bash_aliases" >> ~/.bash_aliases  # link to bash aliases
 
 
 # for git, set username and email

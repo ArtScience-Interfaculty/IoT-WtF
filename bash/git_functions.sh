@@ -1,3 +1,13 @@
+# easy functions for git [push, pull, commit], also set git identity
+
+# to load these, just run
+# source gitfunctions.sh
+
+git config --global user.name  $(whoami)
+# or:
+# git config --global user.name  "h4nkw1ll1@ms"
+git config --global user.email `whoami`"@"`hostname`
+
 function push(){
   #git add .
   git add --all .
@@ -28,3 +38,4 @@ function commit(){
   git commit -m $MSG
 }
 
+echo "- git functions read"

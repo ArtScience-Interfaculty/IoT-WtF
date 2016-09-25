@@ -2,13 +2,17 @@
 
 ## test with node.js
 
-#### receive osc msgs coming in at port 3333
+#### receive osc msgs (listening at default port 3333, optional port argument)
 ```bash
 node oscdump.js
+node oscdump.js 9000
 ```
-#### send '/wtf' message with random int (to localhost:3333), run this in another terminal
+#### send message with random int (defaults to msg: '/wtf', and localhost:3333, optional port and osctag arguments)
+#### run this in another terminal, then look at oscdump output (ports should obviously match!)
 ```bash
 node oscsend.js
+node oscsend.js 9000
+node oscsend.js 9000 /hulahoop
 ```
 ## nodered flows for osc
 

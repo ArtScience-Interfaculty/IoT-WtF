@@ -6,7 +6,7 @@
 ```bash
 node ./oscdump.js
 ```
-#### send '/wtf' message with random int (to localhost:3333)
+#### send '/wtf' message with random int (to localhost:3333), run this in another terminal
 ```bash
 node ./oscsend.js
 ```

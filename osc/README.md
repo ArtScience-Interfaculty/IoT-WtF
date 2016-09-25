@@ -4,11 +4,11 @@
 
 #### receive osc msgs coming in at port 3333
 ```bash
-node ./oscdump.js
+node oscdump.js
 ```
-#### send '/wtf' message with random int (to localhost:3333)
+#### send '/wtf' message with random int (to localhost:3333), run this in another terminal
 ```bash
-node ./oscsend.js
+node oscsend.js
 ```
 ## nodered flows for osc
 

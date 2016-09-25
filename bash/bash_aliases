@@ -42,7 +42,7 @@ echo "vnc-stop  	- stop vnc server (it is running from boot)"
 echo "vnc-start 	- start vnc server (same display as hdmi/vi ports)"
 echo "node-red-stop 	- stop node-red server (it starts at boot)"
 echo "node-red-start 	- start node-red server"
-echo "nodered server	- http://"`hostname`".local:1881"
+echo "nodered server	- http://"`hostname`":1881"
 # echo "mosquitto_start   - start mosquitto"
 echo "- aliases read"
 echo

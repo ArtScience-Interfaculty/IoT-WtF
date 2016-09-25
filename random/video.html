@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+body {
+        background-color: #000;
+}
+div#container {
+    width: 50%;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+<video width="640" height="30" preload controls autoplay>
+    <source src="https://www.youtube.com/watch?v=-X_Da5MJaGo" type="video/mp4" />
+</video>
+
+<video width="320" height="240" preload controls autoplay loop>
+    <source src="https://www.youtube.com/watch?v=sDnG1JhZ2N4" type="video/mp4" />
+</video>
+
+<video width="320" height="240" preload controls autoplay>
+    <source src="https://www.youtube.com/watch?v=stHkOpcDUig" type="video/mp4" />
+</video>
+
+<video width="640" height="360" preload controls autoplay loop>
+    <source src="https://www.youtube.com/watch?v=1mwGbN0jX4M" type="video/mp4" />
+</video>
+
+</div>
+
+<script>
+videos = document.querySelectorAll("video");
+for (var i = 0, l = videos.length; i < l; i++) {
+    var video = videos[i];
+    var src = video.src || (function () {
+        var sources = video.querySelectorAll("source");
+        for (var j = 0, sl = sources.length; j < sl; j++) {
+            var source = sources[j];
+            var type = source.type;
+            var isMp4 = type.indexOf("mp4") != -1;
+            if (isMp4) return source.src;
+        }
+        return null;
+    })();
+    if (src) {
+        var isYoutube = src && src.match(/(?:youtu|youtube)(?:\.com|\.be)\/([\w\W]+)/i);
+        if (isYoutube) {
+            var id = isYoutube[1].match(/watch\?v=|[\w\W]+/gi);
+            id = (id.length > 1) ? id.splice(1) : id;
+            id = id.toString();
+            var mp4url = "http://www.youtubeinmp4.com/redirect.php?video=";
+            video.src = mp4url + id;
+        }
+    }
+}
+</script>
+
+</body>
+</html>

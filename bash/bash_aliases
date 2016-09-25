@@ -1,51 +1,56 @@
 alias iot="cd $HOME/dev/IoT-WtF"
 
 IOTWTF=$HOME"/dev/IoT-WtF"
-
 alias iot="cd $IOTWTF && git status"
 
 ALIASESPATH=$IOTWTF"/bash/bash_aliases"
-
 FUNCPATH=$IOTWTF"/bash/bash_functions.sh"
 source $FUNCPATH
-
-alias ?="source $ALIASESPATH" # evaluate aliases
+alias ?="clear; source $ALIASESPATH" # evaluate aliases
 alias ??="nano $ALIASESPATH && source $ALIASESPATH" # edit this file, and then evaluate its content
 
 ## X (display server)
-
 alias x-start="sudo /etc/init.d/lightdm start"
 alias x-stop="sudo /etc/init.d/lightdm stop"
 
 
-## VNC
+mkdir -p $HOME"/log"
 
+## VNC
 # this is the hdmi/video one, it starts at boot
 alias vnc-stop="sudo pkill x11vnc"
-alias vnc-start="/home/pi/.bootstart_vnc.sh &"
-
+# alias vnc-start="/home/pi/.bootstart_vnc.sh &"
+alias vnc-start="sudo /usr/bin/x11vnc -geometry 800x480 -display :0 &> $HOME/log/vncout.log"
+alias vnc-log="cat $HOME/log/vncout.log"
 # this is another desktop from the one coming out of hdmi/video output
-alias vnc+-start="vncserver :1 -geometry 1024x768 -depth 24"
-alias vnc+-stop="pkill Xtightvnc"
+#alias vnc+-start="vncserver :1 -geometry 1024x768 -depth 24"
+#alias vnc+-stop="pkill Xtightvnc"
 
-alias mosquitto_start="sudo /etc/init.d/mosquitto start"
+alias mosquitto-stop="sudo /etc/init.d/mosquitto stop"
+alias mosquitto-start="sudo /etc/init.d/mosquitto start"
 
 alias io="iostat -c 2 2"
 
 ## this is what you see (when type '?')
 
 # echo "getip - get ip address"
-echo "io		- cpu stats"
-echo "x-stop     	- stop X display server"
+echo "x-stop     	- stop X display server (for running headless)"
 echo "x-start		- start X"
 echo "vnc-stop  	- stop vnc server (it is running from boot)"
 echo "vnc-start 	- start vnc server (same display as hdmi/vi ports)"
-echo "node-red-stop 	- stop node-red server (it starts at boot)"
-echo "node-red-start 	- start node-red server"
-echo "nodered server	- http://"`hostname`":1881"
-# echo "mosquitto_start   - start mosquitto"
-echo "- aliases read"
+#echo "vnc+-stop         - stop vnc+ server"
+#echo "vnc+-start        - start vnc+ server"
+echo "nodered-stop 	- stop node-red server (it starts at boot)"
+echo "nodered-start 	- start node-red server (http://"`hostname`":1881)"
+echo "mosquitto-stop    - stop local mosquitto broker"
+echo "mosquitto-start   - start local mosquitto broker (mqtt://localhost:1883)"
+echo "io                - cpu stats"
+echo "iot               - go to IoT-WtF git repository"
+# echo "- aliases read"
+echo
+uptime
 echo
 tiffi | lolcat -a
-echo "? / ??"
+echo
+echo "type ? or ?? (edit)"
 # echo ":))"

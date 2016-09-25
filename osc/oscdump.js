@@ -1,7 +1,7 @@
 #!/usr/bin/node
 var osc = require('node-osc');
 var portarg = process.argv[2];
-port = 3333;
+port = 8989;
 if( typeof portarg !== 'undefined' ){ port = portarg } else { console.log("NB. you may use optional port argument") };
 console.log("listening on port: " + port);
 

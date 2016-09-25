@@ -3,12 +3,16 @@ var osc = require('node-osc');
 var portarg = process.argv[2];
 var tagarg = process.argv[3];
 
-tag = '/wtf';
-port = 3333;
+tag = '/nodered/r1';
+port = 8900;
+debugport = 8989
+
 if( typeof portarg !== 'undefined' ){ port = portarg };
 if( typeof tagarg !== 'undefined' ){ tag = tagarg };
 
-console.log('just sent msg: ' + tag + ' to localhost:' + port);
-console.log("you may also do:\n./oscsend.js port /osctag");
-
 var client = new osc.Client('127.0.0.1', port); client.send( tag, Math.random(), function () { client.kill(); });
+var debugclient = new osc.Client('127.0.0.1', debugport); debugclient.send( tag, Math.random(), function () { debugclient.kill(); });
+
+console.log('- successfully sent msg: ' + tag + ' to localhost: ' + port + ' and ' + debugport);
+console.log("- optional usage: ./oscsend.js port /osctag");
+

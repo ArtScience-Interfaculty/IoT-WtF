@@ -22,6 +22,16 @@ alias vnc-stop="sudo pkill x11vnc"
 # alias vnc-start="/home/pi/.bootstart_vnc.sh &"
 alias vnc-start="sudo /usr/bin/x11vnc -geometry 800x480 -display :0 &> $HOME/log/vncout.log"
 alias vnc-log="cat $HOME/log/vncout.log"
+
+#sudo apt-get install tightvncserver
+#update-alternatives: using /usr/bin/tightvncserver to provide /usr/bin/vncserver (vncserver) in auto mode
+#update-alternatives: using /usr/bin/Xtightvnc to provide /usr/bin/Xvnc (Xvnc) in auto mode
+#Setup vnc password by the following command
+#tightvncserver
+#sudo reboot
+# vncserver :0 -geometry 1920x1080 -depth 24 
+# vncserver -kill :0
+
 # this is another desktop from the one coming out of hdmi/video output
 #alias vnc+-start="vncserver :1 -geometry 1024x768 -depth 24"
 #alias vnc+-stop="pkill Xtightvnc"
@@ -34,6 +44,8 @@ alias io="iostat -c 2 2"
 ## this is what you see (when type '?')
 
 # echo "getip - get ip address"
+alias wan="echo WAN/Public IP address: $(dig +short myip.opendns.com @resolver1.opendns.com)"
+
 echo "x-stop     	- stop X display server (for running headless)"
 echo "x-start		- start X"
 echo "vnc-stop  	- stop vnc server (it is running from boot)"

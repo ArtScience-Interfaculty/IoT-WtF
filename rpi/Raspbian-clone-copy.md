@@ -1,57 +1,36 @@
-# easily access pi on your home network
-# plus some other stuff (tired of the cat?)
+#Raspbian Clone and Restore
+ 
+##Cloning or backupping the Raspian SC Card
+Insert SD Card in slot
+ 
+In terminal type the following to find the disk device
+ 
+`diskutil list`
+ 
+This usually is something like `/dev/disk2` , but note the disk size, so make sure you have the right one!
+ 
+Then clone the SD Card to a disk image, note we type `rdisk` instead of `disk` because of speed issues.
+ 
+`sudo dd if=/dev/rdisk2 of=~/Desktop/raspberrypi-bkup.dmg bs=5m`
+ 
+It will ask for your password.
+ 
+Cloning takes quite some time, be patient. Type `Ctrl-T` to see progress.
+ 
+##Copying a backup to a SD Card
+ 
+This is the reverse process from above.
+ 
+Find the disk and note the disk#: e.g. `disk2`
 
+`diskutil list`
 
-* change hostname, on the pi:
-* by default it is rapberrypi.local
-sudo nano /etc/hostname
+Now you nedd to unmount the disk, note the disk#!!
 
-we assume you changed is to 'mynewrpihostname'
+`diskutil unmountDisk /dev/disk2`
 
-* change password
-passwd
+Make sure the diskimage `rpiwtf.img` is on your desktop and type (note it's `rdisk` not `disk`
 
---- add your home network ---
--- on the raspberry, do:
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
+`sudo dd if=~/Desktop/rpiwtf.img of=/dev/rdisk2 bs=5m`
 
--- add (and fill in) this:
-network={
-        ssid="YOURWIRELESSNETWORKNAME"
-        psk="ITSPASSWORD"
-        key_mgmt=WPA-PSK
-}
-
-
-
-* when at home, you can find out rpi's ip
-* use ping for this
-* NB. you may need to add .local:
-
-ping raspberrypi
-ping: cannot resolve raspberrypi: Unknown host
-
-ping raspberrypi.local
-PING raspberrypi.local (192.168.1.45)
-64 bytes from 192.168.1.45: icmp_seq=0 ttl=64 time=5.240 ms
-
-
-* ssh
-ssh pi@mynewrpihostname.local
-
-* nodered in browser:
-http://raspberrypi.local:1880
-
-
-
-
-
-
-
---- cosmetics
-* when tired of the daring cat
-replace ~/share/.jpg
-
-* change msg of the day (what you see when logging in):
-sudo nano /etc/motd
-
+Note this takes at least 5 minutes. Type Ctrl-T to see progress.
